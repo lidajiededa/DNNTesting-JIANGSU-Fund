@@ -89,7 +89,7 @@ choices = [`NC`, `KMNC`, `NBC`, `SNAC`, `TKNC`, `TKNP`, `CC`, `LSC`, `DSC`, `MDS
 
 - `--hyper` - 所用指标的超参数。 `None` 如果指标没有超参数 (也就是NLC, SNAC, NBC)。
 
-#### 生成式(文本)模型
+#### 生成式（文本）模型
 
 ```bash
 python eval_diversity_text.py --criterion NC --hyper 0.75
