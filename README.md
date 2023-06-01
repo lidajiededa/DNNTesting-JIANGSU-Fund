@@ -26,8 +26,8 @@
 
 ## 模型和数据集
 
-- 预训练模型: 请参考 [模型](https://github.com/lidajiededa/DNNTesting-JIANGSU-Fund/pretrained_models).
-- 数据集: 请参考 [数据集](https://github.com/lidajiededa/DNNTesting-JIANGSU-Fund/datasets).
+- 预训练模型: 请参考 [模型](https://github.com/lidajiededa/DNNTesting-JIANGSU-Fund/tree/main/pretrained_models).
+- 数据集: 请参考 [数据集](https://github.com/lidajiededa/DNNTesting-JIANGSU-Fund/tree/main/datasets).
 
 下载 `pretrained_models`, `datasets`以及 `adversarial_examples` 文件夹 [此处](https://hkustconnect-my.sharepoint.com/:f:/g/personal/yyuanaq_connect_ust_hk/EhO-hLQ6SRVItt-ZBkrD-8YBAZTqGAdxOsnMOvHIXeKS9A?e=DjdDsK).
 
