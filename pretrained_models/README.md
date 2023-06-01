@@ -1,4 +1,5 @@
-We evaluate previous coverage criteria and NLC on the following DNN models.
+我们在以下DNN模型上评估了以前的覆盖标准和NLC
+
 
 | Model        | Training dataset | Remark                       |
 | ------------ | ---------------- | ---------------------------- |
@@ -12,7 +13,7 @@ We evaluate previous coverage criteria and NLC on the following DNN models.
 | BigGAN       | ImageNet         | Image & Generative model     |
 | LSTM         | IMDB             | Text & Discriminative model  |
 
-Their implementations are shown in `models`.
+它们的实现见 `models`.
 
-Download the pre-trained weights [here](https://hkustconnect-my.sharepoint.com/:f:/g/personal/yyuanaq_connect_ust_hk/EhO-hLQ6SRVItt-ZBkrD-8YBAZTqGAdxOsnMOvHIXeKS9A?e=DjdDsK).
+下载预训练权重 [此处](https://hkustconnect-my.sharepoint.com/:f:/g/personal/yyuanaq_connect_ust_hk/EhO-hLQ6SRVItt-ZBkrD-8YBAZTqGAdxOsnMOvHIXeKS9A?e=DjdDsK).
 
