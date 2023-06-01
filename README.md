@@ -68,7 +68,7 @@ cov = criterion.current
 
 ## 实验
 
-在准备玩模型和数据集后, 首先在`constants.py`中设置好路径 .  
+在准备好模型和数据集后, 首先在`constants.py`中设置好路径 .  
 
 ### 测试套件的多样性
 
