@@ -81,8 +81,10 @@ criterion.build(train_loader)
 if args.criterion not in ['CC', 'TKNP', 'LSC', 'DSC', 'MDSC']:
     criterion.assess(train_loader)
 '''
-    对于LSC/DSC/MDSC/CC/TKNP，使用训练数据进行初始化太慢（有时可能超过内存限制）。你可以跳过这
-    一步来加快实验速度，这不会影响结论，因为我们只比较覆盖值的相对顺序，而不是确切的数字。
+For LSC/DSC/MDSC/CC/TKNP, initialization with training data is too slow (sometimes may
+exceed the memory limit). You can skip this step to speed up the experiment, which
+will not affect the conclusion because we only compare the relative order of coverage
+values, rather than the exact numbers.
 '''
 utility.log('Initial coverage: %d' % criterion.current, fp)
 

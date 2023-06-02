@@ -37,7 +37,7 @@ def make_path(path):
 
 class NormalizeInverse(torchvision.transforms.Normalize):
     """
-    撤消归一化并返回输入域中的重建图像
+    Undoes the normalization and returns the reconstructed images in the input domain.
     """
 
     def __init__(self, mean, std):

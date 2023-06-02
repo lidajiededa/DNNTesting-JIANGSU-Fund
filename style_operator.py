@@ -102,7 +102,7 @@ vgg = nn.Sequential(
 )
 
 def calc_mean_std(feat, eps=1e-5):
-    # eps是为了避免除数为0而使用的一个小值.
+    # eps is a small value added to the variance to avoid divide-by-zero.
     size = feat.data.size()
     assert (len(size) == 4)
     N, C = size[:2]
