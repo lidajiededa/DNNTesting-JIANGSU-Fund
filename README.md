@@ -1,17 +1,17 @@
-## 实现
+## 基于Python的针对深度学习系统的分析和测试平台
 
-我们复现并实现了以下的神经元覆盖率指标，包括  
+我们复现并改进了以下共十种分析测试指标，包括  
 
-- [x] Neuron Coverage (**NC**) 
-- [x] K-Multisection Neuron Coverage (**KMNC**) 
-- [x] Neuron Boundary Coverage (**NBC**) 
-- [x] Strong Neuron Activation Coverage (**SNAC**) 
-- [x] Top-K Neuron Coverage (**TKNC**) 
-- [x] Top-K Neuron Patterns (**TKNP**) 
-- [x] Cluster-based Coverage (**CC**) 
-- [x] Likelihood Surprise Coverage (**LSC**) 
-- [x] Distance-ratio Surprise Coverage (**DSC**) 
-- [x]  Mahalanobis Distance Surprise Coverage (**MDSC**) 
+- [x] 神经元覆盖测试指标 (**NC**) 
+- [x] 多区间覆盖测试指标 (**KMNC**) 
+- [x] 边缘覆盖测试指标 (**NBC**) 
+- [x] 强激活覆盖测试指标 (**SNAC**) 
+- [x] top-k覆盖测试指标 (**TKNC**) 
+- [x] top-k覆盖组合测试指标 (**TKNP**) 
+- [x] 基于聚类的测试指标 (**CC**) 
+- [x] 基于数据集的概率意外覆盖测试指标 (**LSC**) 
+- [x] 基于数据集的距离比例意外覆盖测试指标 (**DSC**) 
+- [x] 基于数据集的马氏距离意外覆盖测试指标(**MDSC**) 
 
 
 ## 安装
@@ -29,7 +29,8 @@
 - 预训练模型: 请参考 [模型](https://github.com/lidajiededa/DNNTesting-JIANGSU-Fund/tree/main/pretrained_models).
 - 数据集: 请参考 [数据集](https://github.com/lidajiededa/DNNTesting-JIANGSU-Fund/tree/main/datasets).
 
-下载 `pretrained_models`, `datasets`以及 `adversarial_examples` 文件夹 [此处](https://hkustconnect-my.sharepoint.com/:f:/g/personal/yyuanaq_connect_ust_hk/EhO-hLQ6SRVItt-ZBkrD-8YBAZTqGAdxOsnMOvHIXeKS9A?e=DjdDsK).
+测试对象示例：下载 `pretrained_models`, `datasets`以及 `adversarial_examples` 文件夹 [此处](https://hkustconnect-my.sharepoint.com/:f:/g/personal/yyuanaq_connect_ust_hk/EhO-hLQ6SRVItt-ZBkrD-8YBAZTqGAdxOsnMOvHIXeKS9A?e=DjdDsK).
+或者将自定义模型与数据集放入对应文件夹即可。
 
 ## 如何开始使用
 
@@ -84,23 +85,10 @@ chocies = [`resnet50`, `vgg16_bn`, `mobilenet_v2`]
 - `--dataset` - 被测试的DNN的训练集，测试套件是使用此数据集的测试拆分生成的
 choices = [`CIFAR10`, `ImageNet`]
 
-- `--criterion` - 使用的覆盖率指标.  
+- `--criterion` - 使用的分析测试指标.  
 choices = [`NC`, `KMNC`, `NBC`, `SNAC`, `TKNC`, `TKNP`, `CC`, `LSC`, `DSC`, `MDSC`, `NLC`]
 
 - `--hyper` - 所用指标的超参数。 `None` 如果指标没有超参数 (也就是NLC, SNAC, NBC)。
-
-#### 生成式（文本）模型
-
-```bash
-python eval_diversity_text.py --criterion NC --hyper 0.75
-```
-
-- `--criterion` - 使用的覆盖率指标  
-choices = [`NC`, `KMNC`, `NBC`, `SNAC`, `TKNC`, `TKNP`, `CC`, `LSC`, `DSC`, `MDSC`, `NLC`]
-
-- `--hyper` - 所用指标的超参数。 `None` 如果指标没有超参数 (也就是NLC, SNAC, NBC)。
-
-
 
 ### 测试套件的故障揭示能力
 

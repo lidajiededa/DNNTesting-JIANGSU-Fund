@@ -1,5 +1,5 @@
 PAD_LENGTH = 32
-# for text model to unroll layers
+# 为文本模型展开层
 
 PRETRAINED_MODELS = './pretrained_models'
 
@@ -8,8 +8,8 @@ AE_DIR = './adversarial_examples/'
 CIFAR10_JPEG_DIR = './datasets/CIFAR10/'
 IMAGENET_JPEG_DIR = '/data/yyuanaq/data/IMAGE-NET/ILSVRC/Data/CLS-LOC/'
 IMAGENET_LABEL_TO_INDEX = './datasets/ImageNet/ImageNetLabel2Index.json'
-# Since we use the pretrained weights provided by pytorch,
-# we should use the same `label_to_index` mapping.
+# 我们使用的是pytorch提供的预训练权重,
+# 我们应当使用相同的 `label_to_index` 映射.
 
 BIGGAN_IMAGENET_PROJECT_DIR = './BigGAN-projects/ImageNet'
 BIGGAN_CIFAR10_PROJECT_DIR = './BigGAN-projects/CIFAR10'

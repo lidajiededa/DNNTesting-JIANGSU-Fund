@@ -762,7 +762,7 @@ class TKNP(Coverage):
 
 class CC(Coverage):
     '''
-    Cluster-based Coverage, i.e., the coverage proposed by TensorFuzz
+    基于聚类的覆盖测试指标, 即由TensorFuzz提供的覆盖
     '''
     def init_variable(self, hyper):
         assert hyper is not None
