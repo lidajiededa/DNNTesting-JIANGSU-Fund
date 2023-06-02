@@ -36,34 +36,34 @@
 
 ```python
 import torch
-# Implemented using Pytorch
+# 使用Pytorch实现
 
 import tool
 import coverage
 
-# 0. Get layer size in model
+# 0. 获取模型层的大小
 input_size = (1, image_channel, image_size, image_size)
 random_input = torch.randn(input_size).to(device)
 layer_size_dict = tool.get_layer_output_sizes(model, random_input)
 
-# 1. Initialization
-# `hyper` denotes the hyper-paramter of a criterion;
-# set `hyper` as None if a criterion is hyper-paramter free (e.g., NLC).
+# 1. 初始化
+# `hyper` 表示指标的超参数;
+# 如果没有超参数，将`hyper`设置为None(例如NLC).
 criterion = coverage.NLC(model, layer_size_dict, hyper=None)
-# KMNC/NBC/SNAC/LSC/DSC/MDSC requires training data statistics of the tested model,
-# which is implemented in `build`. `train_loader` can be a DataLoader object in Pytorch or a list of data samples.
-# For other criteria, `build` function is empty.
+# KMNC/NBC/SNAC/LSC/DSC/MDSC 需要测试的模型的训练数据统计,
+# 在`build`中实现。`train_loader`可以是Pytorch中的DataLoader对象或数据样本列表。
+# 对于其他指标, `build` 函数是空的.
 criterion.build(train_loader)
 
-# 2. Calculation
-# `test_loader` stores all test inputs; it can be a DataLoader object in Pytorch or a list of data samples.
+# 2. 计算
+# `test_loader` 储存了所有的测试输入; 它可以是Pytorch中的DataLoader对象或数据样本列表。
 criterion.assess(test_loader)
-# If test inputs are gradually given from a data stream (e.g., in fuzzing), then calculate the coverage as the following way.
+# 如果测试输入是从数据流中逐渐给出的（例如，在模糊测试中），则按以下方式计算覆盖率。
 for data in data_stream:
     criterion.step(data)
 
-# 3. Result
-# The following instruction assigns the current coverage value to `cov`.
+# 3. 结果
+# 以下将当前覆盖值赋值给 `cov`.
 cov = criterion.current
 ```
 
