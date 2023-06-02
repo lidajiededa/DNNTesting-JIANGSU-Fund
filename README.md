@@ -48,7 +48,7 @@ layer_size_dict = tool.get_layer_output_sizes(model, random_input)
 
 # 1. 初始化
 # `hyper` 表示指标的超参数;
-# 如果没有超参数，将`hyper`设置为None(例如NLC).
+# 如果没有超参数，将`hyper`设置为None(例如NLC)。
 criterion = coverage.NLC(model, layer_size_dict, hyper=None)
 # KMNC/NBC/SNAC/LSC/DSC/MDSC 需要测试的模型的训练数据统计,
 # 在`build`中实现。`train_loader`可以是Pytorch中的DataLoader对象或数据样本列表。
